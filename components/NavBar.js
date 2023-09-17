@@ -74,9 +74,12 @@ getAllClasses()
 
         <p className=' font-mono border-black  hover:text-yellow-700 cursor-default text-black'>kingtut-trading Contact</p>
         <div className='flex flex-row '>
-          <AiOutlineFacebook size={50} className='hover:text-yellow-500 hover:cursor-pointer text-black'></AiOutlineFacebook>
-          <AiOutlineMobile onClick={() => setPopUpPopUpData('01005648558')} size={50} className='hover:text-yellow-500 hover:cursor-pointer text-black'></AiOutlineMobile>
-          <AiOutlineMail onClick={() => setPopUpPopUpData('Abuelyazid.software@gmail.com')} size={50} className='hover:text-yellow-500 hover:cursor-pointer text-black'></AiOutlineMail>
+          <a href='https://www.facebook.com/profile.php?id=100065167503714&mibextid=LQQJ4d'>
+            <AiOutlineFacebook size={50} className='hover:text-yellow-500 hover:cursor-pointer text-black'></AiOutlineFacebook>
+          </a>
+          
+          <AiOutlineMobile onClick={() => setPopUpPopUpData('+20 122 990 3406')} size={50} className='hover:text-yellow-500 hover:cursor-pointer text-black'></AiOutlineMobile>
+          <AiOutlineMail onClick={() => setPopUpPopUpData('Kingtuttrading@gmail.com')} size={50} className='hover:text-yellow-500 hover:cursor-pointer text-black'></AiOutlineMail>
         </div>
         <p className='text-black'>{PopUpData}</p>
         <GiCancel size={50} onClick={()=>setPopUp('hidden')} className='mt-5 hover:text-red-400 hover:cursor-pointer'></GiCancel>

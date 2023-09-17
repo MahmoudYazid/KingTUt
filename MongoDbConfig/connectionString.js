@@ -1,1 +1,1 @@
-export const conectionStr = 'mongodb+srv://abuelyazidsoftware:mnimai21yo@clone.7pm38gz.mongodb.net/kingtut?retryWrites=true&w=majority';
+export const conectionStr = 'mongodb+srv://tut:amgad@tutdb.dtbsmbg.mongodb.net/kingtut?retryWrites=true&w=majority';
