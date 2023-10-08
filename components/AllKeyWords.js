@@ -1,17 +1,18 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { Domain } from '../MongoDbConfig/domain'
 
 export default function AllClasses() {
     const [AllClasses, SetAllClasses] = useState([])
     const getAllClasses = () => {
-        const response = axios.get('http://31.220.55.175:3000/api/GetAllKeyWords').then((res_) => {
+        const response = axios.get(`http://${Domain}:3000/api/GetAllKeyWords`).then((res_) => {
             SetAllClasses(res_.data.res)
 
         })
     }
 
     const DelClasses = (TargetId) => {
-        const response = axios.get('http://31.220.55.175:3000/api/DelKeyWord', {
+        const response = axios.get(`http://${Domain}:3000/api/DelKeyWord`, {
             headers: {
                 id_: TargetId
             }

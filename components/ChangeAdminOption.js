@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useState,useRef } from 'react'
 import { getCookies, getCookie, setCookie, deleteCookie } from 'cookies-next';
+import { Domain } from '../MongoDbConfig/domain'
 
 
 export default function ChangeAdminOption() {
@@ -14,7 +15,7 @@ export default function ChangeAdminOption() {
       SetresState('Fill All the inputs')
       return 0
     } 
-    const response = axios.get('http://31.220.55.175:3000/api/ChangeAdmin',{
+    const response = axios.get(`http://${Domain}:3000/api/ChangeAdmin`,{
       headers:{
         newname : newnameRef.current.value,
         newpassword :newPasswordRef.current.value,

@@ -5,6 +5,7 @@ import { AiOutlineFacebook, AiOutlineMobile, AiOutlineMail } from 'react-icons/a
 import { useSelector, useDispatch } from 'react-redux'
 import { GiCancel } from 'react-icons/gi';
 import { change } from '@/Store/slicer';
+import { Domain } from '../MongoDbConfig/domain'
 
 export default function NavBar() {
     const [SideBarVisibilityState, SetSideBarVisibilityState]=useState('invisible')
@@ -17,13 +18,13 @@ export default function NavBar() {
   const dispatch = useDispatch()
 
   const getAllClasses = () => {
-    axios.get('http://31.220.55.175:3000/api/GetAllClasses').then((res_) => {
+    axios.get(`http://${Domain}:3000/api/GetAllClasses`).then((res_) => {
       SetAllClasses(res_.data.res)
 
     })
   }
   const ChangeSearchedData=(name_)=>{
-    axios.get('http://31.220.55.175:3000/api/GetSpecificClass',{
+    axios.get(`http://${Domain}:3000/api/GetSpecificClass`,{
       headers:{
         specificclass_: name_
       }

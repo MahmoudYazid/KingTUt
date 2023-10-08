@@ -6,6 +6,7 @@ import { AiOutlineFacebook, AiOutlineMobile, AiOutlineMail } from 'react-icons/a
 import axios from 'axios';
 import { getCookie } from 'cookies-next';
 import { useRouter } from 'next/router';
+import { Domain } from '../MongoDbConfig/domain'
 
 export default function LoginComponant() {
     const checkCOOKIE = () => {
@@ -22,7 +23,7 @@ export default function LoginComponant() {
     const passwordref = useRef()
 
     const loginFunc = () => {
-        const response = axios.get('http://31.220.55.175:3000/api/login', {
+        const response = axios.get(`http://${Domain}:3000/api/login`, {
             headers: {
                 name: usernameref.current.value,
                 password: passwordref.current.value,

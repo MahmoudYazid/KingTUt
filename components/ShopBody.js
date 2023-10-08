@@ -5,12 +5,13 @@ import axios from 'axios'
 import  {useSelector,useDispatch} from 'react-redux'
 import { change } from '@/Store/slicer'
 import path from 'path'
+import { Domain } from '../MongoDbConfig/domain'
 
 export default function ShopBody() {
    
     const dispatch = useDispatch();
     const getAllProducts =async () => {
-        const response = await axios.get('http://31.220.55.175:3000/api/GetAllProducts').then((res_) => {
+        const response = await axios.get(`http://${Domain}:3000/api/GetAllProducts`).then((res_) => {
 
             dispatch(change(res_.data.res));
     

@@ -38,7 +38,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     if (files?.length) {
 
         /* Create directory for uploads */
-        const targetPath = path.join(process.cwd(), `/images/`);
+        const targetPath = '../images/';
         try {
             await fs.access(targetPath);
         } catch (e) {

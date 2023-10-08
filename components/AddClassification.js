@@ -1,12 +1,13 @@
 import axios from 'axios'
 import React, { useRef, useState } from 'react'
+import { Domain } from '../MongoDbConfig/domain'
 
 export default function AddClassification() {
   const Newclass = useRef()
   const [Showedres, setShowedres] = useState('')
   const AddToDb = ()=>{
     console.log(Newclass.current.value)
-    const request = axios.get('http://31.220.55.175:3000/api/AddClassification',{
+    const request = axios.get(`http://${Domain}:3000/api/AddClassification`,{
       headers: {
         classificationname_: Newclass.current.value,
 

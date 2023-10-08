@@ -2,12 +2,13 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useSelector ,useDispatch} from 'react-redux'
 import { change } from '@/Store/slicer'
+import { Domain } from '../MongoDbConfig/domain'
 
 export default function AllProducts() {
     const dispatch = useDispatch();
 
     const getAllProducts = async () => {
-        const response = await axios.get('http://31.220.55.175:3000/api/GetAllProducts').then((res_) => {
+        const response = await axios.get(`http://${Domain}:3000/api/GetAllProducts`).then((res_) => {
 
             dispatch(change(res_.data.res));
 
@@ -16,7 +17,7 @@ export default function AllProducts() {
     }
    
     const DelClasses = (TargetId) => {
-        const response = axios.get('http://31.220.55.175:3000/api/DelProducts', {
+        const response = axios.get(`http://${Domain}:3000/api/DelProducts`, {
             headers: {
                 id_: TargetId
             }

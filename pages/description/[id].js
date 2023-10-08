@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import path from 'path'
 import React, { useEffect, useState } from 'react'
+import { Domain } from '../../MongoDbConfig/domain'
 
 export default function MainId() {
   const router = useRouter()
@@ -11,7 +12,7 @@ export default function MainId() {
   const [IdData, setIdData]= useState([])
   const getSpecificId=()=>{
    
-    axios.get('http://31.220.55.175:3000/api/getspeficidproduct',{
+    axios.get(`http://${Domain}:3000/api/getspeficidproduct`,{
       headers:{
         id_:id
       }

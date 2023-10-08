@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useRef, useState,useEffect } from "react";
+import { Domain } from '../MongoDbConfig/domain'
 
 const AddProduct = () => {
 
@@ -45,7 +46,7 @@ const AddProduct = () => {
   
   };
   const GetAllClassifications = ()=>{
-    axios.get('http://31.220.55.175:3000/api/GetAllClasses').then((res_) => {
+    axios.get(`http://${Domain}:3000/api/GetAllClasses`).then((res_) => {
       SetClassesState(res_.data.res)
 
     })
