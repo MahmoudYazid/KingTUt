@@ -39,7 +39,7 @@ export default function ShopBody() {
                               <div class="relative overflow-hidden bg-cover bg-no-repeat">
                                   <img
                                       class="rounded-t-lg h-[250px] w-[500px] "
-                                      src={FetchedData.imgname == '' ? `/Pharaoh.svg` : ` ../images/${FetchedData.imgname}`}
+                                      src={FetchedData.imgname == '' ? `/Pharaoh.svg` : `/api/public/UploadedImg/${FetchedData.imgname}`}
                                       alt={'img Not Exist'} />
                               </div>
                               <div class="p-6 bg-white text-center ">

@@ -18,7 +18,7 @@ export default function handler(
             _id: _id_,
             
         }).then(data => {
-            const targetPath = path.join(process.cwd(), `/public/${data[0].imgname}`);
+            const targetPath = path.join(process.cwd(), `/public/UploadedImg/${data[0].imgname}`);
             fs.unlink(targetPath   , (err) => {
   if (err) {
     console.error('Error deleting file:', err);
