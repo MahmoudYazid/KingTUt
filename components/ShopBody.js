@@ -37,7 +37,7 @@ export default function ShopBody() {
                               <div class="relative overflow-hidden bg-cover bg-no-repeat">
                                   <img
                                       class="rounded-t-lg h-[250px] w-[500px] "
-                                      src={FetchedData.imgname == ''  ? '/Pharaoh.svg' : `/UploadedImg/${FetchedData.imgname}`   }
+                                      src={GetData.imgname == '' ? path.join(process.cwd(), `/public/Pharaoh.svg`) : path.join(process.cwd(), `/public/UploadedImg/${GetData.imgname}`)}
                                       alt={'img Not Exist'} />
                               </div>
                               <div class="p-6 bg-white text-center ">
