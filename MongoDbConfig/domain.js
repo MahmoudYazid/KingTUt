@@ -1,1 +1,1 @@
-export const Domain ='localhost'
+export const Domain ='31.220.55.175'
