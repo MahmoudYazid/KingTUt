@@ -33,7 +33,7 @@ export default function MainId() {
             <img src={GetData.imgname == '' ? `/Pharaoh.svg` : `/api/public/UploadedImg/${GetData.imgname}` } className='min-w-[10rem] h-[10rem]  self-center ml-5	mt-5 mb-5 hover:scale-[2]	'></img>
             <div className='text-center flex  justify-center items-center'>
               <Link href={'/'} className='self-center ml-5 font-serif border-black border-2 p-1 rounded-lg hover:bg-black hover:text-white hover:cursor-pointer bg-white	'> Back </Link>
-              <p className='self-center ml-5 font-serif border-black border-2 p-1 rounded-lg bg-white hover:bg-black hover:text-white hover:cursor-pointer	'> For order : Abuelyazid.software@gmail.com </p>
+              <p className='self-center ml-5 font-serif border-black border-2 p-1 rounded-lg bg-white hover:bg-black hover:text-white hover:cursor-pointer	'> For order : Kingtuttrading@gmail.com </p>
             </div>
             <div className='bg-black min-h-[14rem] mt-3 '>
               <p className='text-yellow-400'>Description</p>
