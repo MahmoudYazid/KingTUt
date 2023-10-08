@@ -10,7 +10,7 @@ export default function MainId() {
   const [IdData, setIdData]= useState([])
   const getSpecificId=()=>{
    
-    axios.get('http://localhost:3000/api/getspeficidproduct',{
+    axios.get('http://31.220.55.175:3000/api/getspeficidproduct',{
       headers:{
         id_:id
       }
