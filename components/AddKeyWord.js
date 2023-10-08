@@ -5,7 +5,7 @@ export default function AddKeyWord() {
     const NewWord = useRef()
     const [Showedres, setShowedres] = useState('')
     const AddToDb = () => {
-        const request = axios.get('http://localhost:3000/api/Addkeywords', {
+        const request = axios.get('http://31.220.55.175:3000/api/Addkeywords', {
             headers: {
                 word_: NewWord.current.value,
 

@@ -4,14 +4,14 @@ import React, { useEffect, useState } from 'react'
 export default function AllClasses() {
     const [AllClasses, SetAllClasses]=useState([])
     const getAllClasses=()=>{
-        const response = axios.get('http://localhost:3000/api/GetAllClasses').then((res_)=>{
+        const response = axios.get('http://31.220.55.175:3000/api/GetAllClasses').then((res_)=>{
             SetAllClasses(res_.data.res)
 
         })
     }
 
     const DelClasses = (TargetId) => {
-        const response = axios.get('http://localhost:3000/api/DelClassification',{
+        const response = axios.get('http://31.220.55.175:3000/api/DelClassification',{
             headers:{
                 id_: TargetId
             }

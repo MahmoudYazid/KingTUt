@@ -9,7 +9,7 @@ export default function ShopBody() {
    
     const dispatch = useDispatch();
     const getAllProducts =async () => {
-        const response =await  axios.get('http://localhost:3000/api/GetAllProducts').then((res_) => {
+        const response = await axios.get('http://31.220.55.175:3000/api/GetAllProducts').then((res_) => {
 
             dispatch(change(res_.data.res));
     

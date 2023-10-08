@@ -22,7 +22,7 @@ export default function LoginComponant() {
     const passwordref = useRef()
 
     const loginFunc = () => {
-        const response = axios.get('http://localhost:3000/api/login', {
+        const response = axios.get('http://31.220.55.175:3000/api/login', {
             headers: {
                 name: usernameref.current.value,
                 password: passwordref.current.value,

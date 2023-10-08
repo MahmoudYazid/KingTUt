@@ -17,13 +17,13 @@ export default function NavBar() {
   const dispatch = useDispatch()
 
   const getAllClasses = () => {
-    axios.get('http://localhost:3000/api/GetAllClasses').then((res_) => {
+    axios.get('http://31.220.55.175:3000/api/GetAllClasses').then((res_) => {
       SetAllClasses(res_.data.res)
 
     })
   }
   const ChangeSearchedData=(name_)=>{
-    axios.get('http://localhost:3000/api/GetSpecificClass',{
+    axios.get('http://31.220.55.175:3000/api/GetSpecificClass',{
       headers:{
         specificclass_: name_
       }

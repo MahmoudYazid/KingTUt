@@ -6,7 +6,7 @@ export default function AddClassification() {
   const [Showedres, setShowedres] = useState('')
   const AddToDb = ()=>{
     console.log(Newclass.current.value)
-    const request = axios.get('http://localhost:3000/api/AddClassification',{
+    const request = axios.get('http://31.220.55.175:3000/api/AddClassification',{
       headers: {
         classificationname_: Newclass.current.value,
 

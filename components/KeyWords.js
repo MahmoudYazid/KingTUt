@@ -8,13 +8,13 @@ export default function KeyWords() {
   const dispatch = useDispatch()
 
   const getAllKeyWords = () => {
-    const response = axios.get('http://localhost:3000/api/GetAllKeyWords').then((res_) => {
+    const response = axios.get('http://31.220.55.175:3000/api/GetAllKeyWords').then((res_) => {
       SetKeyWords(res_.data.res)
 
     })
   }
   const ChangeSearchedData = (Taget_) => {
-    axios.get('http://localhost:3000/api/SearchOnKeyWord', {
+    axios.get('http://31.220.55.175:3000/api/SearchOnKeyWord', {
       headers: {
         word_: Taget_
       }

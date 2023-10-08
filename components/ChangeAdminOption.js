@@ -14,7 +14,7 @@ export default function ChangeAdminOption() {
       SetresState('Fill All the inputs')
       return 0
     } 
-    const response = axios.get('http://localhost:3000/api/ChangeAdmin',{
+    const response = axios.get('http://31.220.55.175:3000/api/ChangeAdmin',{
       headers:{
         newname : newnameRef.current.value,
         newpassword :newPasswordRef.current.value,
