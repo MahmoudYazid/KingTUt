@@ -30,7 +30,7 @@ export default function MainId() {
       {
         IdData.map((GetData)=>(
           <div className='flex md:flex-col flex-col w-[60rem] min-h-[30rem] bg-white   m-3 text-center border-black border-2  '>
-            <img src={GetData.imgname == '' ? `/Pharaoh.svg` : `/UploadedImg/${GetData.imgname}` } className='min-w-[10rem] h-[10rem]  self-center ml-5	mt-5 mb-5 hover:scale-[2]	'></img>
+            <img src={GetData.imgname == '' ? `/Pharaoh.svg` : `/api/public/UploadedImg/${GetData.imgname}` } className='min-w-[10rem] h-[10rem]  self-center ml-5	mt-5 mb-5 hover:scale-[2]	'></img>
             <div className='text-center flex  justify-center items-center'>
               <Link href={'/'} className='self-center ml-5 font-serif border-black border-2 p-1 rounded-lg hover:bg-black hover:text-white hover:cursor-pointer bg-white	'> Back </Link>
               <p className='self-center ml-5 font-serif border-black border-2 p-1 rounded-lg bg-white hover:bg-black hover:text-white hover:cursor-pointer	'> For order : Abuelyazid.software@gmail.com </p>
