@@ -4,6 +4,7 @@ import Link from 'next/link'
 import axios from 'axios'
 import  {useSelector,useDispatch} from 'react-redux'
 import { change } from '@/Store/slicer'
+import path from 'path'
 
 export default function ShopBody() {
    

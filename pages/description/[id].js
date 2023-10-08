@@ -1,6 +1,7 @@
 import axios from 'axios'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import path from 'path'
 import React, { useEffect, useState } from 'react'
 
 export default function MainId() {
